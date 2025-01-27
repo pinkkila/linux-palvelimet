@@ -126,19 +126,5 @@ Logissa näkyy window manager warningit kun käytin komentoa ensin ilman sudoa. 
 ![img.png](images/h2/journalctl.png)
 
 
-#### h) Asenna jokin plugin micro-editorille ja kokeile sitä.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
