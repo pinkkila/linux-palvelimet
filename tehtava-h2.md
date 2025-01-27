@@ -25,6 +25,8 @@ scp -r FOLDER example@example.com:public_html/ #exit remote koneesta ennen komen
 
 ![img.png](images/h2/micro-install.png)
 
+Valitettavasti en nopeasti pystynyt käyttämään microa, koska command-moodiin pääseminen vaatii ilmeisesti ctrl + e ja omalla koneellani tuo näppäinyhdistelmä on varattu teminaalin avaamiselle/aktivoinnille.
+
 <br>
 
 #### b) Asenne kolme itsellesi uutta komentoriviohjelmaa.
