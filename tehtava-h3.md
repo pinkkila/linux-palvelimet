@@ -204,7 +204,7 @@ On jo.
 
 ### o) Laita sama tietokone vastaamaan kahdellla eri sivulla kahdesta eri nimestä.
 
-Ajattelin että käytän aiemapaa esim.examplea.com ja hattu.example.com.
+Ajattelin, että käytän aiemapia esim.examplea.com ja hattu.example.com.
 
 Ensin:
 
@@ -215,11 +215,11 @@ sudo a2ensite esim.example.com
 sudo systemctl restart apache2
 ```
 
-etc/host näytti tältä
+etc/host näytti tältä:
 
 ![img.png](images/h3/host1.png)
 
-Muutin sen tälläiseksi, eli kuten [ohjeissa](https://terokarvinen.com/linux-palvelimet/) neuvottiin tekemään yhdellä sivulla, mutta nyt laitoin molemmat sivut:
+Kuten [ohjeissa](https://terokarvinen.com/linux-palvelimet/) neuvottiin tekemään yhdellä sivulla, niin nyt laitoin molemmat sivut:
 
 ![img.png](images/h3/host2.png)
 
