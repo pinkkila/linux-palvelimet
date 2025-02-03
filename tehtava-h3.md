@@ -73,7 +73,7 @@ echo testi > /home/petteri/public_sites/esim.example.com/index.html
 
 ![img.png](images/h3/403-log.png)
 
-Tunnilla oli sama tilanne ja [löysin](https://askubuntu.com/questions/451922/apache-access-denied-because-search-permissions-are-missing) silloin tämän mielestäni siistin komennon:
+Tunnilla oli sama tilanne ja löysin silloin [tämän](https://askubuntu.com/questions/451922/apache-access-denied-because-search-permissions-are-missing) mielestäni siistin komennon:
 
 ```
 namei --modes /home/petteri/public_sites
