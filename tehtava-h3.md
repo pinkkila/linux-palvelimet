@@ -215,7 +215,7 @@ sudo a2ensite esim.example.com
 sudo systemctl restart apache2
 ```
 
-etc/host näytti tältä:
+Alunperin etc/host näytti tältä:
 
 ![img.png](images/h3/host1.png)
 
