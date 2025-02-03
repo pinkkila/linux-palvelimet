@@ -9,11 +9,11 @@ The Apache Software Foundation 2023: Apache HTTP Server Version 2.4 Documentatio
 - Nimi pohjaisessa (name-based) virtual hostingissa serveri nojaa siihen, että client imoittaa hostnamem osana HTTP headerseja. Näin eri hostit voivat jaa saman IP osoitteen.
 - Name based virtual hostingissa DNS server pitää konfiguroida ohjaamaan jokainen hostname oikeaan IP osoitteeseen ja tämän jälkeen konfiguroida Apache HTTP serveri tunnistamaan eri hostnamet.
 - Name-based virtual hosting vähentää tarvetta useammalle IP osoitteelle.
-- 
 
+Karvinen 2018: [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/)
 
-
-
+- Usein sinulla on yksi IP osoite, jolla on useita web-sivuja. 
+- Apachella on mahdollista toteuttaa useampi domain nimi yhdellä IP-osoitteella.
 
 ---
 
@@ -172,27 +172,58 @@ Sivun muokkaaminen onnistuu ilman sudoa:
 ![img.png](images/h3/hattu2.png)
 ![img.png](images/h3/hattu3.png)
 
+
+
 ### e) Tee validi HTML5 sivu.
 
-Ajattelin mielenkiinnosta kokeilla IntelliJ:n html templatea nähdäkseni mitä validator.w3.org sanoo siitä. 
+templatena käytin Tero Karvisen [esimerkkiä](https://terokarvinen.com/2012/short-html5-page/).
+
+![img.png](images/h3/html5-1.png)
+![img.png](images/h3/html5-2.png)
+![img.png](images/h3/html5-3.png)
+
+Korjausten jälkeen
+![img.png](images/h3/html5-4.png)
 
 
+### f) Anna esimerkit 'curl -I' ja 'curl' -komennoista. Selitä 'curl -I' muutamasta näyttämästä otsakkeesta (response header), mitä ne tarkoittavat.
+
+![img.png](images/h3/curl.png)
+
+ETag - entity tag, joka yksilöi tietyn version resurssista. Parantaa cachen toimintaa ja säästää bandwithia. Estää myös samanaikaisia päivityksiä kirjoittamasta toistensa yli. Lähde: [mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag).
+
+Accept-Ranges - Accept-Ranges headerilla ilmoittaa, että serveri pystyy jatkamaan häirittyä latausta ilman, että clientin täytyy käynnistää siirtoa kokonaan alusta. Lähde: [mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges).
+
+Vary - Vary headerin sisältyminen varmistaa, että responset ovat erikseen cached riippuen headereista, jotka on listattu vary kentässä. Useimmiten tätä käytetään cache avainten tekoon kun content negoation on käytössä. Lähde: [mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary).
 
 
+### m) Hanki GitHub Education -paketti.
+
+On jo.
 
 
+### o) Laita sama tietokone vastaamaan kahdellla eri sivulla kahdesta eri nimestä.
+
+Ajattelin että käytän aiemapaa esim.examplea.com ja hattu.example.com.
+
+Ensin:
+
+```
+sudo a2ensite esim.example.com
+```
+```
+sudo systemctl restart apache2
+```
+
+etc/host näytti tältä
+
+![img.png](images/h3/host1.png)
+
+Muutin sen tälläiseksi, eli kuten [ohjeissa](https://terokarvinen.com/linux-palvelimet/) neuvottiin tekemään yhdellä sivulla, mutta nyt laitoin molemmat sivut:
+
+![img.png](images/h3/host2.png)
 
 
+Tämän jälkeen:
 
-
-
-
-
-
-
-
-
-
-
-
-
+![img.png](images/h3/host3.png)
