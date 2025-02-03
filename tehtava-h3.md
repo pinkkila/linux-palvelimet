@@ -83,7 +83,7 @@ ja sen tulos:
 
 ![img.png](images/h3/namei-command.png)
 
-Karvisen [ohjeiden](https://terokarvinen.com/linux-palvelimet/) oheita mukaillen käytin komentoa:
+Karvisen [ohjeita](https://terokarvinen.com/linux-palvelimet/) mukaillen käytin komentoa:
 
 ```
 sudo chmod ugo+x /home/petteri
