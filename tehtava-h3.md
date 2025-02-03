@@ -83,7 +83,7 @@ ja sen tulos:
 
 ![img.png](images/h3/namei-command.png)
 
-Karvisen [ohjeiden](https://terokarvinen.com/linux-palvelimet/) oheita käytten (tai soveltaen) käytin komentoa:
+Karvisen [ohjeiden](https://terokarvinen.com/linux-palvelimet/) oheita mukaillen käytin komentoa:
 
 ```
 sudo chmod ugo+x /home/petteri
@@ -102,10 +102,93 @@ Käynnistettyäni apachen uudelleen:
 ### b) Etsi lokista rivit, jotka syntyvät, kun lataat omalta palvelimeltasi yhden sivun. Analysoi rivit (eli selitä yksityiskohtaisesti jokainen kohta ja numero, etsi tarvittaessa lähteitä).
 
 
-![img.png](images/logs.png)
+![img.png](images/h3/logs.png)
 
-- 127.0.0.1 on localhostin IPv4 loopback osoite (lähde: [wikipedia: localhost](https://en.wikipedia.org/wiki/Localhost)).
-- 
+Yhdellä pyynnöllä tulee kolme logia:
+
+127.0.0.1 - - [03/Feb/2025:13:12:35 +0200] "GET / HTTP/1.1" 200 3380 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+
+127.0.0.1 - - [03/Feb/2025:13:12:35 +0200] "GET /icons/openlogo-75.png HTTP/1.1" 200 6040 "http:\//localhost/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+
+127.0.0.1 - - [03/Feb/2025:13:12:35 +0200] "GET /favicon.ico HTTP/1.1" 404 487 "http:\//localhost/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+
+
+#### 127.0.0.1
+
+-  localhostin IPv4 loopback osoite (lähde: [wikipedia: localhost](https://en.wikipedia.org/wiki/Localhost)).
+
+#### "GET /favicon.ico HTTP/1.1" 404 487 
+
+- GET pyyntö /favicon.ico:sta HTTP/1.1 protokollalla versio 1.1 [wikipedia: HTTP](https://en.wikipedia.org/wiki/HTTP) statuksella 404 Not Found. 487 tarkoittaa palautetun objektin kokoa (ei sisällä response headerseja)  [apache.org](https://httpd.apache.org/docs/2.4/logs.html)
+
+#### "http\://localhost/"
+
+- The "Referer" (sic) HTTP request header. Sivu jota client jota haki [apache.org](https://httpd.apache.org/docs/2.4/logs.html)
+
+#### "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+
+- The User-Agent HTTP request header. Client selaimen itsestään ilmoittamat tiedot [apache.org](https://httpd.apache.org/docs/2.4/logs.html)
+
+- seuraavassa kahdessa pyynnössä oleva 200 on pyynnön OK status.
+
+
+### c) Etusivu uusiksi.
+
+```
+sudoedit /etc/apache2/sites-available/hattu.example.com.conf
+```
+
+```
+<VirtualHost *:80>
+ ServerName hattu.example.com
+ ServerAlias www.hattu.example.com
+ DocumentRoot /home/petteri/public_sites/hattu.example.com
+ <Directory /home/petteri/public_sites/hattu.example.com>
+   Require all granted
+ </Directory>
+</VirtualHost>
+```
+
+```
+sudo a2ensite hattu.example.com
+```
+```
+sudo a2dissite esim.example.com.conf
+```
+
+```
+sudo systemctl restart apache2
+```
+
+```
+mkdir -p /home/petteri/public_sites/hattu.example.com/
+```
+```
+echo "<h1>hattu</h1>" > /home/petteri/public_sites/hattu.example.com/index.html
+```
+
+![img.png](images/h3/hattu1.png)
+Sivun muokkaaminen onnistuu ilman sudoa:
+![img.png](images/h3/hattu2.png)
+![img.png](images/h3/hattu3.png)
+
+### e) Tee validi HTML5 sivu.
+
+Ajattelin mielenkiinnosta kokeilla IntelliJ:n html templatea nähdäkseni mitä validator.w3.org sanoo siitä. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
