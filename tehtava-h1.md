@@ -20,13 +20,13 @@ a) Asenna Linux virtuaalikoneeseen. (Tee raporttia varten uusi virtuaalikone, va
 
 Käytin Parallels Desktop nimistä ohjelmaa, jolla voi asentaa ja hallinnoida virtuaalikoneita ARM macOS:ssa. 
 
-![img.png](images/install-arch/parallers1.png)
+![img.png](images/h1/parallers1.png)
 
-![img.png](images/install-arch/parallels2.png)
+![img.png](images/h1/parallels2.png)
 
-![img_1.png](images/install-arch/parallels3.png)
+![img_1.png](images/h1/parallels3.png)
 
-![img.png](images/install-arch/parallels4.png)
+![img.png](images/h1/parallels4.png)
 
 Boring! Koska tämä ei kehittänyt minua Linuxin asentamisessa mitenkään ajattelin asentaa Linuxin toiselle koneelle suoraan raudalle. Sitten voisin opintojaksolla käyttää jompaa kumpaa ja varsinkin jos tulee sellainen tilanne, johon ei ARM-ympäristö sovikkaan. Jännä nähdä tuleeko sellaista tilanneta ja että pystyykä silloin käyttämään tuota Parallelsin Ubuntu with Rosetta -virtuaalikonetta.   
 
@@ -37,9 +37,9 @@ Asennus tulee perustumaan https://t2linux.org/#Installation ohjeisiin. Ohjeena k
 
 ## Ympärisö
 
-![img.png](images/install-arch/macinfo.png)
+![img.png](images/h1/macinfo.png)
 
-![img.png](images/install-arch/ymparisto.png)
+![img.png](images/h1/ymparisto.png)
 
 
 
@@ -55,7 +55,7 @@ Asennus tulee perustumaan https://t2linux.org/#Installation ohjeisiin. Ohjeena k
 
 Kaikki toimi ohjeiden mukaan.
 
-![img.png](images/install-arch/balenaEtcher.png)
+![img.png](images/h1/balenaEtcher.png)
 
 ### Levyn partiointi
 
@@ -72,7 +72,7 @@ In macOS Disk Utility you need to create your Linux partition:
 
 Kaikki toimi oletusti ja ohjeiden mukaan myös tässä
 
-![img.png](images/install-arch/partitointi.png)
+![img.png](images/h1/partitointi.png)
 
 ### Secure Boot laittaminen pois päältä
 
@@ -96,7 +96,7 @@ Myös tämä meni suoraan ohjeiden mukaan.
 
 Valitsin ohjeiden mukaan kaikkein oikeamman puoleisen.
 
-![img.png](images/install-arch/boot-nakyma1.png)
+![img.png](images/h1/boot-nakyma1.png)
  
 
 ## Follow distro specific steps
@@ -107,7 +107,7 @@ Täm osio perustuu t2linux.org lisäksi https://wiki.archlinux.org/title/Install
 
 Tässä vaiheessa asennus näytti tältä:
 
-![img.png](images/install-arch/tty-alku.png)
+![img.png](images/h1/tty-alku.png)
 
 
 ### Näppäimistön kieli
@@ -177,7 +177,7 @@ ja internetyhteys toimi.
 Time zone oli UTC, +0000 ja kellon aika oli siihen nähden oikein. 
 Olettaisin, että time zonea ei kuulu asennuksen aikana muuttaa, koska siitä ei ole oppaassa mainintaa joten jätin sen +0000
 
-![img.png](images/install-arch/timezone.png)
+![img.png](images/h1/timezone.png)
 
 (kuvassa näkyy myös archlinux.org pingin onnistuminen)
 
@@ -189,41 +189,41 @@ Skipataan ohjeiden mukaan, koska tehtiin jo aikaisemmin macOS:n kautta.
 
 Tässä vaiheessa aloin käyttää apuna ensimmäisessä kappaleessa mainitsemaani videota "Dual Boot Arch Linux and macOS" (jatkossa DBARCH-video) ja oli hieman hämilläni mitä minun pitäisi tehdä, koska wiki.archlinux.org ohjeet ohjeistivat tekemään formatoinnnin myös swap_partitionille ja minulla ei ollut sellaista. Lisäksi en oikein tiennyt, että mitkä partitiot minun pitäisi formatoida. Katsoin DBARCH-videota eteenpäin ja siinä selitettiin hieman tarkemmin, eikä myöskään tehty swapille omaa partitiointia. Jostais syystä videolla kyllä tehtiin disk partitiointi, jonka jätin tekemättä, koska se oli ristiriidassa t2linux wikin kanssa. Asennus eteni seuraavien kuvien mukaisesti:
 
-![img.png](images/install-arch/format1.png)
+![img.png](images/h1/format1.png)
 
 Seuraavasta kuvasta ja DBARCH-viedon selvennyksestä ja t2linux ohjeesta ymmärsin, että minun tulee formatoida /dev/nvme0n1p3. /dev/nvme0n1p1 olisi sellaisenaan ok.
 
-![img.png](images/install-arch/format2.png)
+![img.png](images/h1/format2.png)
 
 t2linux wikin ohje
 
-![img.png](images/install-arch/format3.png)
+![img.png](images/h1/format3.png)
 
 Formatointi
 
-![img.png](images/install-arch/format4.png)
+![img.png](images/h1/format4.png)
 
 mount ja /mnt/boot direkstoryn tekeminen. Molemmat /dev/nvme0n1p3 ja dev/nvme0n1p1 tulivat mountatuiksi ja siis EFI tuli mountatuksi /mnt/boot 
 
-![img.png](images/install-arch/format5.png)
+![img.png](images/h1/format5.png)
 
 lsblk komennon näkymä nyt:
 
-![img.png](images/install-arch/format6.png)
+![img.png](images/h1/format6.png)
 
 ### Select the mirrors
 
 Seurasin DBARCH-videota ja asensin pacman -Syy reflector:
 
-![img.png](images/install-arch/reflector1.png)
+![img.png](images/h1/reflector1.png)
 
 mirroslist asentaminen ei onnistunut, koska "No module named 'Reflector'"
 
-![img.png](images/install-arch/reflector2.png)
+![img.png](images/h1/reflector2.png)
 
 Yritin etsiä mirrolistiä, mutta sitähän ei tietenkään löytynyt 
 
-![img.png](images/install-arch/reflector3.png)
+![img.png](images/h1/reflector3.png)
 
 Koska olin hieman pihalla, niin siirryin eteenpäin kuitenkin muistaen, että tämä osio ei onnistunut.
 
@@ -232,165 +232,165 @@ Koska olin hieman pihalla, niin siirryin eteenpäin kuitenkin muistaen, että t�
 
 Yritin seuraavaksi tehdä t2linux ohjeen osiota
 
-![img.png](images/install-arch/install-packages1.png)
+![img.png](images/h1/install-packages1.png)
 
 Tämä ei onnistunut:
 
-![img.png](images/install-arch/install-packages2.png)
+![img.png](images/h1/install-packages2.png)
 
 Googlailtuani ajoin seuraavan komennon (komento löytyi tästä videosta: https://www.youtube.com/watch?v=BWUqPzjZrSs):
 
-![img.png](images/install-arch/keyring.png)
+![img.png](images/h1/keyring.png)
 
 Nyt komento t2strap /mnt base linux-firmware iwd grub efibootmgr meni läpi:
 
-![img.png](images/install-arch/install-packages3.png)
+![img.png](images/h1/install-packages3.png)
 
 ### Fstab
 
 Seuraavaksi tein DBARCH-vieon ja wiki.archlinux ohjeilla file system tablen:
 
-![img.png](images/install-arch/filesystem-table.png)
+![img.png](images/h1/filesystem-table.png)
 
-![img.png](images/install-arch/filesystem-table2.png)
+![img.png](images/h1/filesystem-table2.png)
 
 ## chroot
 
-![img.png](images/install-arch/chroot1.png)
+![img.png](images/h1/chroot1.png)
 
 ### swap
 
 Seuravaksi tein DBARCH-videon ohjeilla swap-filen
 
-![img.png](images/install-arch/swap-file.png)
+![img.png](images/h1/swap-file.png)
 
 yritin asentaa nanon chrootissa, mutta se ei onnistunut:
 
-![img_1.png](images/install-arch/chroot2.png)
+![img_1.png](images/h1/chroot2.png)
 
 Pääsin kyllä nettiin niinkuin kuvasta näkyy mutta asennus ei onnistunut, koska "could not registe... (database already registered)". Olin hämilläni, ja palasin GPT:n mukaan "live environment" ja siellä nanon asentaminen onnistui. 
 
 Nano ei kulje chrootiin live environmentista
 
-![img_1.png](images/install-arch/chroot3.png)
+![img_1.png](images/h1/chroot3.png)
 
 Ihmettelin myös miksi root eteen tulee välillä numeroita.
 
-![img_1.png](images/install-arch/numeroita.png)
+![img_1.png](images/h1/numeroita.png)
 
 Seuraavaksi koitin asentaa pacstrap nanon /mtn directoryyn:
 
-![img_1.png](images/install-arch/chroot4.png)
+![img_1.png](images/h1/chroot4.png)
 
 Tämän jälkeen pääsin muuttamaan fstab fileä DBARCH-videon ojeiden mukaiseksi
 
-![img.png](images/install-arch/swap-file2.png)
+![img.png](images/h1/swap-file2.png)
 
 ### timezone
 
 timezone listaus ei toiminut
 
-![img.png](images/install-arch/timezone1.png)
+![img.png](images/h1/timezone1.png)
 
 Kun en nähnyt listausta, niin kysyin GPT:ltä mitä arvot voisivat olla ja asensin siltä pohjalta
 
-![img.png](images/install-arch/timezone2.png)
+![img.png](images/h1/timezone2.png)
 
-![img.png](images/install-arch/timezone3.png)
+![img.png](images/h1/timezone3.png)
 
 ### Localization
 
 Seurasin DBRACH-vieon ja wiki.arch
 
-![img.png](images/install-arch/localization.png)
+![img.png](images/h1/localization.png)
 
-![img.png](images/install-arch/localization2.png)
+![img.png](images/h1/localization2.png)
 
 ### Hostname
 
 Seurasin DBRACH-vieon ja wiki.arch
 
-![img.png](images/install-arch/hostname1.png)
+![img.png](images/h1/hostname1.png)
 
-![img.png](images/install-arch/hostname2.png)
+![img.png](images/h1/hostname2.png)
 
 Pääsee komennolla: nano /etc/hosts
 
-![img.png](images/install-arch/hostname3.png)
+![img.png](images/h1/hostname3.png)
 
 ### root salasana
 
 Seurasin DBRACH-vieon ja wiki.arch
 
-![img.png](images/install-arch/root-password.png)
+![img.png](images/h1/root-password.png)
 
 ### apple-bce 
 
 t2linux.org ohjeesta
 
-![img.png](images/install-arch/apple-bce1.png)
+![img.png](images/h1/apple-bce1.png)
 
-![img.png](images/install-arch/apple-bce2.png)
+![img.png](images/h1/apple-bce2.png)
 
-![img.png](images/install-arch/apple-bce3.png)
+![img.png](images/h1/apple-bce3.png)
 
-![img.png](images/install-arch/apple-bce4.png)
+![img.png](images/h1/apple-bce4.png)
 
 ### Enable t2fanrd and tiny-dfr
 
 t2linux.org ohjeesta
 
-![img_1.png](images/install-arch/t2frand-tiny-dfr1.png)
+![img_1.png](images/h1/t2frand-tiny-dfr1.png)
 
-![img.png](images/install-arch/t2franrd-tiny-dfr.png)
+![img.png](images/h1/t2franrd-tiny-dfr.png)
 
-![img.png](images/install-arch/t2fanrd-tiny-dfr3.png)
+![img.png](images/h1/t2fanrd-tiny-dfr3.png)
 
 Edellinen komento ei onnistunut, mutta en ole varma johtuuko siitä, että tässä Air:ssa ei ole touchbaria mikä löytyy sitten taas vastaavasta t2 chipin pro:sta.
 
-![img.png](images/install-arch/t2fandr-tiny-dfr4.png)
+![img.png](images/h1/t2fandr-tiny-dfr4.png)
 
 
 ### Bootloader
 
-![img_1.png](images/install-arch/bootloader1.png)
+![img_1.png](images/h1/bootloader1.png)
 
-![img.png](images/install-arch/bootloader2.png)
+![img.png](images/h1/bootloader2.png)
 
-![img.png](images/install-arch/bootloader3.png)
+![img.png](images/h1/bootloader3.png)
 
-![img.png](images/install-arch/bootloader4.png)
+![img.png](images/h1/bootloader4.png)
 
-![img.png](images/install-arch/bootloader5.png)
+![img.png](images/h1/bootloader5.png)
 
-![img.png](images/install-arch/bootloader6.png)
+![img.png](images/h1/bootloader6.png)
 
 
 ## Starting Arch Linux
 
-![img.png](images/install-arch/reboot.png)
+![img.png](images/h1/reboot.png)
 
-![img.png](images/install-arch/start1.png)
+![img.png](images/h1/start1.png)
 
-![img.png](images/install-arch/tty1-1.png)
+![img.png](images/h1/tty1-1.png)
 
 ### Säätöä
 
 Rootilla pystyi kirjatumaan, mutta en päässyyt enää tty:ssä nettiin, joten en pystynyt asentamaan mitään. Menin takasin asennukseen ja mountasin molemmat partitionit niin kuin aiemmin. Sen jälkeen yritin asentaa NetworkManaerin, joka asennettiin DBARCH-videolla ja pääsin asentaa myös osan muista paketeista joita videolla asennetaan. Olin siis aiemmin ohittanut tämän koska siitä ei ollut mainintaa t2linux.wikin ohjeissa (jälkeenpäin huomasin, että kyllä oli tai maininta oli wiki.archlinux.orgin ohjeissa). Kuitenkin kun menin chroot niin törmäsin samaan ongelmaan kuin aiemmin reflectorin kanssa (Olin tässä vaiheessa kokonaan unohtanut sen, että olin asentanut nanon chrootiin liven environmentin kautta (onkohan oikea termi sille?) pacstrap komennolla, joten jatkoin  chrootin pacmaniin liittyvän ongelman selvittämistä):
 
-![img_1.png](images/install-arch/saatoa1.png)
+![img_1.png](images/h1/saatoa1.png)
 
 Koitin ratkaista ensimmäistä ongelmaa ja googlailun jälkeen päädyin poistamaan jostain syystä dublikoituneita rivejä pacman.conf tiedostosta: 
 
-![img.png](images/install-arch/saatoa2.png)
+![img.png](images/h1/saatoa2.png)
 
 Muutin myös t2wikin ohjeen mukaan kehotuksen eu käyttäjille vaihtaa osoite.
 
-![img.png](images/install-arch/saatoa3.png)
+![img.png](images/h1/saatoa3.png)
 
 Aiemmat database errorit poistuivat, mutta targetit errorit jäivät jäljelle. googlainul jälkeen muutin pacman.conf filen tälläiseksi :
 
-![img.png](images/install-arch/pacmanconf.png)
+![img.png](images/h1/pacmanconf.png)
 
 Tämän jälkeen asennukset onnistuivat.
 
@@ -399,47 +399,47 @@ En tiedä miksi chroot:in pacman.conf file alunperin dublikoinut ja ehkä tyhjen
 
 ## Takaisin tty
 
-![img.png](images/install-arch/networkManager1.png)
+![img.png](images/h1/networkManager1.png)
 
-![img_1.png](images/install-arch/networkManager2.png)
+![img_1.png](images/h1/networkManager2.png)
 
 Seuraavaksi kävi niin, että NetworkManager kyllä löysi kaikki alueeni verkot, mutta ei jostain syystä hyväksy oikeaa salanaa vaan ilmoitaa, että credentialsit puuttuvat. 
 
 Seuraavaksi seurasin ohjeita tältä sivulta: https://vhs.codeberg.page/post/dual-boot-archlinux-mbp-t2/. Jätin siis NetworkManagerni ja käytin iwd:tä ja pääsin nettiin. Tämän olisi varmaan voinut tehdä aikaisemminkin...
 
-![img.png](images/install-arch/iwd1.png)
+![img.png](images/h1/iwd1.png)
 
-![img.png](images/install-arch/iwd2.png)
+![img.png](images/h1/iwd2.png)
 
-![img.png](images/install-arch/iwd3.png)
+![img.png](images/h1/iwd3.png)
 
 
 ### Käyttäjänimi ja salasan
 
 Muutin aiemmin tehdyn käyttäjänimen "pink" oikeudet  
 
-![img.png](images/install-arch/pink-user-oikeudet.png)
+![img.png](images/h1/pink-user-oikeudet.png)
 
 
 ### Desktop envinronment
 
 Googlainun perusteella poimein DBARCH-videolta seuraavat paketit: 
 
-![img.png](images/install-arch/desktop-paketit1.png)
+![img.png](images/h1/desktop-paketit1.png)
 
 Asennus kysyi monta kertaa halutuista paketeista:
 
-![img_1.png](images/install-arch/desktop-paketit2.png)
+![img_1.png](images/h1/desktop-paketit2.png)
 
 Kun asennus oli valmis enableasin sddm
 
-![img.png](images/install-arch/enable-sddm.png)
+![img.png](images/h1/enable-sddm.png)
 
 tadaa!
 
-![img.png](images/install-arch/login-view.png)
+![img.png](images/h1/login-view.png)
 
-![img_1.png](images/install-arch/welcome.png)
+![img_1.png](images/h1/welcome.png)
 
 
 ### Testaus
