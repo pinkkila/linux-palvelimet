@@ -56,7 +56,9 @@ SSL (Secure Socker Layer) on salausprotokolla, joka suunniteltiin HTTP-yhteyksie
 
 ### a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta.
 
-Ensin asensin itselleni uuden Apache2 verkkopalvelimen ja Virtual Named Hostin rekisteröidyllä nimellä, kuten olin aiemmin tehnyt [tehtävässä h4](https://github.com/pinkkila/linux-course/blob/main/tehtava-h4.md) ja [tehtävässä h5](https://github.com/pinkkila/linux-course/blob/main/tehtava-h5.md).
+Ensin asensin itselleni uuden Apache2 verkkopalvelimen ja Virtual Named Hostin rekisteröidyllä nimellä, kuten olin aiemmin tehnyt [tehtävässä h4](https://github.com/pinkkila/linux-course/blob/main/tehtava-h4.md) ja [tehtävässä h5](https://github.com/pinkkila/linux-course/blob/main/tehtava-h5.md). 
+
+Käytän AWS:n EC2 palvelinta ja tällä kertaa valmista admin käyttäjää. Ymmärtääkseni sen käyttäminen on turvallista tai ok (AWS dokumentaatio: "Using the default user is adequate for many applications.") ja käytössä on defaulttina vain ssh kirjautuminen. Lähde [AWS dokumentaatio](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html).   
 
 Laitoin tällä kertaa hieman tyylejä, ettei olisi aivan valkoinen sivu:
 
@@ -231,7 +233,7 @@ Internet Engineering Task Force (IETF). Automatic Certificate Management Environ
 
 Wikipedia. Certificate authority: https://en.wikipedia.org/wiki/Certificate_authority
 
-
+AWS. Manage system users on your Amazon EC2 Linux instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managing-users.html
 
 Wikipedia. TLS: https://fi.wikipedia.org/wiki/TLS
 
