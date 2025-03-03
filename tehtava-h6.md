@@ -143,7 +143,7 @@ Ja tämän jälkeen käynnistin Apachen uudelleen.
 ![img_11.png](img_11.png)
 
 
-Koska käytän AWS:n EC2 palvelinta, määritin Security Groupiin uuden Inbound rulen, joka sallii https portsta 443:
+Koska käytän AWS:n EC2 palvelinta, määritin Security Groupiin uuden Inbound rulen, joka sallii https portista 443:
 
 ![img_12.png](img_12.png)
 
@@ -190,9 +190,32 @@ Mietein mikä on DNS CAA, jota minulla siis ei ole, ja sen on Let's Encruptin [m
 
 ---
 
+### c) Vapaaehtoinen: Tee weppilomake, jossa on käyttäjätunnus ja salasana. Käytä salaamatonta http-yhteyttä. Sieppaa liikennettä (esim. Wireshark, ngrep).
+
+Päätin tehdä yksinkertaisesti virtuaalikoneella lokaalista ja ensin tein html:n:
+
+![img_22.png](img_22.png)
+
+![img_23.png](img_23.png)
+
+Seuraavaksi asensin ngrep
+
+```
+sudo apt-get install ngrep
+```
+
+Laitoin seuraavan komennon (Lähde: [sourceforge](https://ngrep.sourceforge.net/usage.html)) ja syötin lomakkeeseen user ja password:
+
+```
+sudo ngrep -d any port 80
+```
+
+![img_25.png](img_25.png)
 
 
+![img_24.png](img_24.png)
 
+Ei ole hirveän yllättävää, että salasana ja käyttänimi tulevat selkeästi esille, koska yhteyttä ei ole mitenkään salattu.
 
 ---
 
@@ -225,3 +248,5 @@ Stack Overflow. How do you score A+ with 100 on all categories on SSL Labs test 
 WebMasters. SSL Labs Cipher Strength < 100%, why? How do I make it?:  https://webmasters.stackexchange.com/questions/114447/ssl-labs-cipher-strength-100-why-how-do-i-make-it
 
 Let's Encrypt Certificate Authority Authorization (CAA): https://letsencrypt.org/fi/docs/caa/
+
+SourceForge. ngrep: https://ngrep.sourceforge.net/usage.html
