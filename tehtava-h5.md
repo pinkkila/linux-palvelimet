@@ -152,7 +152,7 @@ Lähde miten dmarc voi käyttää: [cisco](https://www.cisco.com/c/en/us/support
 
 DMARC eli Domain-based Message Authentication, Reporting and Conformance, toimii SPF:n ja DomainKeys Identified Mail (DKIM) kanssa suojatakseen käyttäjää huijaus-, spam- ja kalastelu-hyökkäyksiltä. DMARC mahdollistaa raportoinnin ja monitoroinnin  aimminlueteltujen hyökkäysten yrityksille. Lähde [nslookup](https://www.nslookup.io/learning/dmarc-a-practical-guide/) (Aika hyvä guide tää!)
 
-![img.png](img.png)
+![img.png](images/h5/img.png)
 
 
 

@@ -60,7 +60,7 @@ Ensin asensin itselleni uuden Apache2 verkkopalvelimen ja Virtual Named Hostin r
 
 Laitoin tällä kertaa hieman tyylejä, ettei olisi aivan valkoinen sivu:
 
-![img_1.png](img_1.png)
+![img_1.png](images/h6/img_1.png)
 
 Jos tekisin tätä aiemmin tehdyllä palvelimella tekisin:
 
@@ -88,7 +88,7 @@ https://acme-staging-v02.api.letsencrypt.org/directory
 
 Seuraavaksi tein lego-nimisen kansion käyttäjän kotihakemistoon:
 
-![img_2.png](img_2.png)
+![img_2.png](images/h6/img_2.png)
 
 Seuraavaksi ajoin komennon tunnilla käydyn perusteella ja varmistallen komennon oikeellisuutta Lego:n [dokumentaatiosta](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/index.html#using-an-existing-running-web-server):
 
@@ -96,15 +96,15 @@ Seuraavaksi ajoin komennon tunnilla käydyn perusteella ja varmistallen komennon
 lego --server=https://acme-staging-v02.api.letsencrypt.org/directory --accept-tos --email=petteri.pinkkila@outlook.com --domains=pinkkhub.com --domains=www.pinkkhub.com --http --http.webroot='/home/admin/public_sites/pinkkhub.com' --path='/home/admin/lego' --pem run
 ```
 
-![img_3.png](img_3.png)
+![img_3.png](images/h6/img_3.png)
 
 Tarkistin vielä kansiot:
 
-![img_4.png](img_4.png)
+![img_4.png](images/h6/img_4.png)
 
 Nimesin stageing-hakemiston uudelleen ja tein uuden lego hakemiston:
 
-![img_5.png](img_5.png)
+![img_5.png](images/h6/img_5.png)
 
 Seuravaksi poistin --server=... optionin lego-komennosta:
 
@@ -112,19 +112,19 @@ Seuravaksi poistin --server=... optionin lego-komennosta:
 lego --accept-tos --email=petteri.pinkkila@outlook.com --domains=pinkkhub.com --domains=www.pinkkhub.com --http --http.webroot='/home/admin/public_sites/pinkkhub.com' --path='/home/admin/lego' --pem run
 ```
 
-![img_6.png](img_6.png)
+![img_6.png](images/h6/img_6.png)
 
 Tarkistin taas kansiot:
 
-![img_7.png](img_7.png)
+![img_7.png](images/h6/img_7.png)
 
 Seuraavaksi muokkasin tunnillakäydyn mukaisesti pinkkhub.com.conf tiedostoa:
 
-![img_8.png](img_8.png)
+![img_8.png](images/h6/img_8.png)
 
 Seuraavaksi käynnistin apachen uudelleen ja sain seuraavan virhe-ilmoituksen:
 
-![img_9.png](img_9.png)
+![img_9.png](images/h6/img_9.png)
 
 Tero Karvisen [sivujen ohjeilla](https://terokarvinen.com/linux-palvelimet/) ajoin seuraavat komennot:
 
@@ -136,16 +136,16 @@ sudo a2enmod ssl
 sudo apache2ctl configtest
 ```
 
-![img_10.png](img_10.png)
+![img_10.png](images/h6/img_10.png)
 
 Ja tämän jälkeen käynnistin Apachen uudelleen. 
 
-![img_11.png](img_11.png)
+![img_11.png](images/h6/img_11.png)
 
 
 Koska käytän AWS:n EC2 palvelinta, määritin Security Groupiin uuden Inbound rulen, joka sallii https portista 443:
 
-![img_12.png](img_12.png)
+![img_12.png](images/h6/img_12.png)
 
 Avasin myös palomuuriin portin 443:
 
@@ -153,13 +153,13 @@ Avasin myös palomuuriin portin 443:
 sudo ufw allow 443/tcp
 ```
 
-![img_13.png](img_13.png)
+![img_13.png](images/h6/img_13.png)
 
 Seuraavaksi kokeillaan toimiiko https yhteys:
 
-![img_14.png](img_14.png)
+![img_14.png](images/h6/img_14.png)
 
-![img_15.png](img_15.png)
+![img_15.png](images/h6/img_15.png)
 
 Konfigurointi näyttää onnistuneen.
 
@@ -176,17 +176,17 @@ Chipher on algoritmi, jolla tehdään kryptaus tai dekryptaus, lähde [wikipedia
 Mietein mikä on DNS CAA, jota minulla siis ei ole, ja sen on Let's Encruptin [mukaan](https://letsencrypt.org/fi/docs/caa/): CAA on DNS record tyyppi, joka sallii sivun omistajan määrittää mikä Certificate Authorities (CAs) ovat sallittuja käsittelemään serfitikaatteja, jotka sisältävät tämän domain nimen.  
 
 
-![img_16.png](img_16.png)
+![img_16.png](images/h6/img_16.png)
 
-![img_17.png](img_17.png)
+![img_17.png](images/h6/img_17.png)
 
-![img_18.png](img_18.png)
+![img_18.png](images/h6/img_18.png)
 
-![img_19.png](img_19.png)
+![img_19.png](images/h6/img_19.png)
 
-![img_20.png](img_20.png)
+![img_20.png](images/h6/img_20.png)
 
-![img_21.png](img_21.png)
+![img_21.png](images/h6/img_21.png)
 
 ---
 
@@ -194,9 +194,9 @@ Mietein mikä on DNS CAA, jota minulla siis ei ole, ja sen on Let's Encruptin [m
 
 Päätin tehdä yksinkertaisesti virtuaalikoneella lokaalista ja ensin tein html:n:
 
-![img_22.png](img_22.png)
+![img_22.png](images/h6/img_22.png)
 
-![img_23.png](img_23.png)
+![img_23.png](images/h6/img_23.png)
 
 Seuraavaksi asensin ngrep
 
@@ -210,10 +210,10 @@ Laitoin seuraavan komennon (Lähde: [sourceforge](https://ngrep.sourceforge.net/
 sudo ngrep -d any port 80
 ```
 
-![img_25.png](img_25.png)
+![img_25.png](images/h6/img_25.png)
 
 
-![img_24.png](img_24.png)
+![img_24.png](images/h6/img_24.png)
 
 Ei ole hirveän yllättävää, että salasana ja käyttänimi tulevat selkeästi esille, koska yhteyttä ei ole mitenkään salattu.
 
