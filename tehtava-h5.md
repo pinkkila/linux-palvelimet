@@ -1,5 +1,7 @@
 # Tehtävä h5 - Nimekäs
 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
 #### Laite jolla tehtävät tehdään:
 
 - Apple MacBook Pro M2 Max

@@ -1,5 +1,7 @@
 # Tehtävä h1
 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
 ---
 
 x) Lue ja tiivistä...

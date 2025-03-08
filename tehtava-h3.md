@@ -1,6 +1,8 @@
 # Tehtävä h3
 
-### x) Lue ja tiivistä 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
+### x) Lue ja tiivistä
 
 The Apache Software Foundation 2023: Apache HTTP Server Version 2.4 Documentation: [Name-based Virtual Host Support](https://httpd.apache.org/docs/2.4/vhosts/name-based.html)
 

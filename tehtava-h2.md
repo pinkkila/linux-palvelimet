@@ -1,5 +1,7 @@
 # Tehtävä h2
 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
 #### x) Lue ja tiivista https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited
 
 - Linuxin käyttämä command line ja BSD (Berkley Sostware Distribution: [lähde](https://docs.freebsd.org/en/articles/explaining-bsd/)) ovat olleet käytössä pitkään ja selvinneet ajan testistä.

@@ -1,5 +1,7 @@
 # h6 Salataampa
 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
 ### x) Lue ja tiivistä
 
 #### Let's Encrypt 2024: [How It Works](https://letsencrypt.org/how-it-works/)

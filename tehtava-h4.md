@@ -1,5 +1,7 @@
 # Tehtävä h4 Maailma kuulee
 
+Tehtävät ovat Tero Karvisen opintojaksolta [Linux Palvelimet 2025 alkukevät](https://terokarvinen.com/linux-palvelimet/).
+
 ### x) Lue ja tiivistä.
 
 [Susanna Lehto 2022: Teoriasta käytäntöön pilvipalvelimen avulla (h4)](https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/) (opiskelijan esimerkkiraportti), kohdat
