@@ -53,6 +53,23 @@ java Hello
 
 ![img_1.png](img_1.png)
 
+
+#### Python
+
+Pythonin suhteen itselläni on nolla osaaminen, joten tarkistin [tästä videosta](https://www.youtube.com/watch?v=3cVAHD4mi30), että miten tämä nyt menikään. 
+
+![img_5.png](img_5.png)
+
+![img_4.png](img_4.png)
+
+
+### C
+
+C:tä en ole tehnyt koskaan, mutta tiedän hiukan C:n historiaa ja sen merkitystä ohjelmointikieliin, joten tämä on jännittävää.
+
+
+
+
 ---
 
 ## Lähteet
@@ -62,3 +79,5 @@ Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-
 Debian Wiki. PackageManagementSearching: https://wiki.debian.org/PackageManagement/Searching
 
 Oracle. Java Downloads: https://www.oracle.com/java/technologies/downloads/
+
+YouTube: Cobb Coding. How to Write Hello World in Python: https://www.youtube.com/watch?v=3cVAHD4mi30
