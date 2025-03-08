@@ -445,3 +445,9 @@ tadaa!
 ### Testaus
 
 Trackpadi ja näppäimistö toimii. NetworkManager on samassa tilanteessa kuin tty ja se vaatii selvittämistä. Nettiä lukuunottamatta toimii mielestäni todella hyvin.  
+
+---
+
+## Lähteet
+
+Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/

@@ -223,6 +223,8 @@ Ei ole hirveän yllättävää, että salasana ja käyttänimi tulevat selkeäst
 
 ## Lähteet
 
+Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
+
 Let's Encrypt. How it works: https://letsencrypt.org/how-it-works/.
 
 Lego. Obtain a Sertificate: https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/index.html#using-an-existing-running-web-server

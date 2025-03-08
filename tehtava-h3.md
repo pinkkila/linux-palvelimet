@@ -227,3 +227,10 @@ Kuten [ohjeissa](https://terokarvinen.com/linux-palvelimet/) neuvottiin tekem채�
 T채m채n j채lkeen:
 
 ![img.png](images/h3/host3.png)
+
+
+---
+
+## L채hteet
+
+Tero Karvinen. Linux Palvelimet 2025 alkukev채t: https://terokarvinen.com/linux-palvelimet/

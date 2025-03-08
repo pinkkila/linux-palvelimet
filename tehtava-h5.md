@@ -155,9 +155,11 @@ DMARC eli Domain-based Message Authentication, Reporting and Conformance, toimii
 ![img.png](images/h5/img.png)
 
 
-
+---
 
 ## Lähteet
+
+Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
 
 Tiny Technical Tutorials. Amazon Route 53 Basics Tutorial | Domain Registration, A Records, CNAME Records, Aliases, Subdomains: https://www.youtube.com/watch?v=JRZiQFVWpi8&t=396s
 

@@ -252,8 +252,11 @@ No ei mitäään tietenkään, kun ei se ole missään dns:ssä haha 😂 (otamm
 AWS:n Route 53 palvelu mahdollistaa ymmärtääkseni IP-osoitteiden routtaamisen domainnimille ja minun piti tehdäkkin se, mutta se osoittaituikin ehkä hiukan monimutkaisemmaksi ja vaatii näillä näkymin ainakin itseltä perehtymistä. 
 
 
+---
 
+## Läheet
 
+Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
 
 
 

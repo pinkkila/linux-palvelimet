@@ -130,3 +130,8 @@ Logissa näkyy window manager warningit kun käytin komentoa ensin ilman sudoa. 
 
 
 
+---
+
+## Lähteet
+
+Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
