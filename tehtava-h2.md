@@ -137,3 +137,15 @@ Logissa näkyy window manager warningit kun käytin komentoa ensin ilman sudoa. 
 ## Lähteet
 
 Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
+
+FreeBSD. Explain BSD: https://docs.freebsd.org/en/articles/explaining-bsd/
+
+Bleeding Computer. linux H/W paths: https://www.bleepingcomputer.com/forums/t/565295/linux-hw-paths/?p=3614874
+
+Linux Kernel Labs. Linux Device Model: https://linux-kernel-labs.github.io/refs/heads/master/labs/device_model.html#classes
+
+
+
+
+
+
