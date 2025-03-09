@@ -453,3 +453,18 @@ Trackpadi ja näppäimistö toimii. NetworkManager on samassa tilanteessa kuin t
 ## Lähteet
 
 Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
+
+t2linux: https://t2linux.org/#Installation
+
+EF - Linux Made Simple. Dual Boot Arch Linux and macOS: https://www.youtube.com/watch?v=x0Qmaa38UM8
+
+archiso-t2:  https://github.com/t2linux/archiso-t2/releases/tag/2024.07.13
+
+ArchWki. Installation Guide: https://wiki.archlinux.org/title/Installation_guide
+
+Rui Wang. How to fix 'invalid or corrupted package (PGP signature)' in Arch Linux: https://www.youtube.com/watch?v=BWUqPzjZrSs
+
+
+
+
+
