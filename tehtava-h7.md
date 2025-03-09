@@ -63,9 +63,61 @@ Pythonin suhteen itselläni on nolla osaaminen, joten tarkistin [tästä videost
 ![img_4.png](img_4.png)
 
 
-### C
+#### C
 
-C:tä en ole tehnyt koskaan, mutta tiedän hiukan C:n historiaa ja sen merkitystä ohjelmointikieliin, joten tämä on jännittävää.
+C:tä en ole kirjoittanut koskaan, mutta tiedän hiukan C:n historiasta ja sen merkityksestä ohjelmointiin ja ohjelmointikieliin, joten tämä on jännittävää.
+
+Tutkein asiaa hieman ja Tero Karvisen [sivujen](https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/) ja [tämän](https://www.youtube.com/watch?v=U3aXWizDbQ4) Fireship videon perusteella tein seuraavaa.
+
+Ensin katsoin mitä seuraava komento antaa (gcc Karvisen sivuilta ja joka Fireshipin videon mukaan on olettavasti GNU C Compiler):
+
+```
+apt-cache search gcc
+```
+
+Vaihtoehtoja tuli vaikka kuinka paljon:
+
+![img_6.png](img_6.png)
+
+Googlailtuani ja [tämän mukaan](https://packages.debian.org/search?keywords=gcc) (kuva alla) oletteisin, että komento gcc ilman versioita asentaa paketin, jossa on itselleni sopiva kääntäjä
+
+![img_8.png](img_8.png)
+
+Seuraavaksi laitoin komennon 
+
+```
+sudo apt-get install gcc
+```
+
+Ja tämän jälkeen kävi ilmi, että minulla oli C-kääntäjä valmiiksi asennettuna:
+
+![img_7.png](img_7.png)
+
+Seuraavaksi mukailin Fireshipin videota ja Karvisen sivua ja tein hello.c nimisen tiedoston, johon kirjoitin seuraavaa:
+
+![img_10.png](img_10.png)
+
+ja seuraavaksi käänsin ja ajoin. 
+
+![img_9.png](img_9.png)
+
+
+### c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.
+
+Aloitin tekemällä scriptin käyttäjän kotihakemistoon, niin kuin muistaakseni Tero neuvoi tekemään tunnilla. 
+
+![img_12.png](img_12.png)
+
+Seuraavaksi siirsin scriptin hakemistoon usr/local/bin ja muokkasin Teron [ohjeilla](https://terokarvinen.com/2007/12/04/shell-scripting-4/) scriptiä:
+
+![img_11.png](img_11.png)
+
+Komento toimii myös parallels-käyttäjällä.
+
+![img_13.png](img_13.png)
+
+### d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
+
 
 
 
@@ -81,3 +133,11 @@ Debian Wiki. PackageManagementSearching: https://wiki.debian.org/PackageManageme
 Oracle. Java Downloads: https://www.oracle.com/java/technologies/downloads/
 
 YouTube: Cobb Coding. How to Write Hello World in Python: https://www.youtube.com/watch?v=3cVAHD4mi30
+
+Tero Karvinen. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
+
+YouTube: Fireship. C in 100 Seconds: https://www.youtube.com/watch?v=U3aXWizDbQ4
+
+Debian packages: https://packages.debian.org/search?keywords=gcc
+
+Tero Karvinen. Shell Scripting: https://terokarvinen.com/2007/12/04/shell-scripting-4/
