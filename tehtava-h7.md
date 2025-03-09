@@ -118,7 +118,66 @@ Komento toimii myös parallels-käyttäjällä.
 
 ### d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
 
+Asensin tehtävää varten uuden virtuaalikoneen. Tein tämän samalla tavalla kuin tehtävässä [h1](https://github.com/pinkkila/linux-course/blob/main/tehtava-h1.md).
 
+Päätin tehdä [tästä labrasta](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/) seuraavat tehtävät:
+
+#### labraharjoitus d) 'howdy'
+
+- Tee kaikkien käyttäjien käyttöön komento 'howdy'
+- Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
+- Pelkkä "hei maailma" ei riitä
+- Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta 
+
+Tein seuraavan scriptin:
+
+```
+#!/bin/bash
+
+user=$(whoami)
+
+today=$(date +"%Y-%m-%d")
+
+echo "Hi, $user!"
+echo "Today's date is: $today"
+
+```
+
+Päivämäärän suhteen otin hieman mallia Teron viime tunnin esimerkistä ja selvitin geeksforgeeks [oheilla](https://www.geeksforgeeks.org/bash-script-define-bash-variables-and-its-types/) miten muuttujiin laitettua komentoja. 
+
+Scripti toimi:
+
+![img_14.png](img_14.png)
+
+Seuraavaksi siirsin scriptin /usr/local/bin hakemistoon ja muutin nimen pelkäksi howdy:ksi.
+
+![img_15.png](img_15.png)
+
+
+#### labraharjoitus e) Etusivu uusiksi
+
+- Asenna Apache-weppipalvelin
+- Tee yrityksellemme "AI Kakone" kotisivu
+- Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
+- Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.
+
+
+#### labraharjoitus g) Salattua hallintaa
+
+- Asenna ssh-palvelin
+- Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
+- Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+
+
+Ja [tästä labrasta](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-syksy-linux-palvelimet/) seuraavat tehtävät
+
+#### labraharjoitus h) Käyttäjät. Käyttäjämme tarvitsevat käyttäjät Linuxiin. Tee uudet käyttäjät seuraaville: John Doe, Erik Vähäkäähkä, Akhmad Amun, Päivä Ångström, Maija-Liisa Vähäaho-Virtaoja. Listaa käyttäien salasanat raporttiin report/index.md .
+
+
+#### labraharjoitus i) Etänä. Kaikki käyttäjämme haluavat käyttää modernisti etänä SSH:lla. Asenna tarvittavat palvelut. Automatisoi oman käyttäjäsi kirjautuminen julkisella avaimella.
+
+
+#### labraharjoitus j) Tee käyttäjille mahdollisuus tehdä kotisivuja. Tee käyttäjille esimerkkikotisivut. (Voit kirjautua kyseisten käyttäjien tunnuksilla, koska he eivät ole vielä voineet tallentaa henkilökohtaisia tietojaan kotihakemistoonsa).
 
 
 
@@ -141,3 +200,12 @@ YouTube: Fireship. C in 100 Seconds: https://www.youtube.com/watch?v=U3aXWizDbQ4
 Debian packages: https://packages.debian.org/search?keywords=gcc
 
 Tero Karvinen. Shell Scripting: https://terokarvinen.com/2007/12/04/shell-scripting-4/
+
+Tero Karvinen.Final Lab for Linux Palvelimet 2024 Spring: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/
+ 
+Tero Karvinen. Final Lab for Linux Palvelimet 2024 Autumn: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-syksy-linux-palvelimet/
+
+GeeksForGeeks. Bash Script – Define Bash Variables and its types: https://www.geeksforgeeks.org/bash-script-define-bash-variables-and-its-types/
+
+
+
