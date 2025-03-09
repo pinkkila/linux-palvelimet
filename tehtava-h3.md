@@ -236,3 +236,29 @@ Tämän jälkeen:
 ## Lähteet
 
 Tero Karvinen. Linux Palvelimet 2025 alkukevät: https://terokarvinen.com/linux-palvelimet/
+
+Apache. Name Based Virtual Host Support: https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+
+Wikipedia. WWW-palvelin: https://fi.wikipedia.org/wiki/WWW-palvelin
+
+Tero Karvinen. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
+
+Ask Ubuntu. Apache: access denied because search permissions are missing:  https://askubuntu.com/questions/451922/apache-access-denied-because-search-permissions-are-missing
+
+Wikipedia. localhost: https://en.wikipedia.org/wiki/Localhost
+
+Wikipedia. HTTP: https://en.wikipedia.org/wiki/HTTP
+
+Apache. Log Files: https://httpd.apache.org/docs/2.4/logs.html
+
+Tero Karvinen. Short HTML5 page: https://terokarvinen.com/2012/short-html5-page/
+
+mdn. ETag: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
+
+mdn. Accept-Ranges: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges
+
+mdn. Vary: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
+
+
+
+
