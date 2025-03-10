@@ -41,7 +41,7 @@ micro --plugin install jump
 
 ja kokeilin
 
-![img.png](img.png)
+![img.png](images/h8/img.png)
 
 ---
 
@@ -59,11 +59,11 @@ contab kysyi mitä editoria haluaisin käyttää ja valitsin itselleni tutumman 
 
 Sitten laiton näin:
 
-![img_2.png](img_2.png)
+![img_2.png](images/h8/img_2.png)
 
 Ja se toimi:
 
-![img_1.png](img_1.png)
+![img_1.png](images/h8/img_1.png)
 
 
 ### b) Ristiinarvioinnin jälkeen olennaisesti parannetut tehtävät
