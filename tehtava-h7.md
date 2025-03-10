@@ -331,11 +331,13 @@ exit ja alkuperäisellä käyttäjällä seuraava ja kopioi:
 cat .ssh/id_rsa.pub
 ```
 
-Toisella käyttäjällä taas sisään sudo -su ja sitten seuraava (jää auki pasteta ja ctr + c)
+Toisella käyttäjällä taas sisään sudo -su ja sitten seuraava (jää auki: pasteta ja ctr + c). 
 
 ```
 cat >> .ssh/authorized_keys
 ```
+
+Sitten taas exit ja kokeile kirjautumista
 
 ```
 ssh petteri@localhost
