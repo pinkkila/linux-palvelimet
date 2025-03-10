@@ -118,9 +118,9 @@ Komento toimii myös parallels-käyttäjällä.
 
 ### d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
 
-Asensin tehtävää varten uuden virtuaalikoneen. Tein tämän samalla tavalla kuin tehtävässä [h1](https://github.com/pinkkila/linux-course/blob/main/tehtava-h1.md).
+Asensin tehtävää varten uuden virtuaalikoneen. Tein tämän samalla tavalla kuin tehtävässä [h1](https://github.com/pinkkila/linux-course/blob/main/tehtava-h1.md). Jätin alustavasti itselleni default käyttäjän parallels. 
 
-Päätin tehdä [tästä labrasta](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/) seuraavat tehtävät:
+Päätin tehdä soveltuvin osin tehtävät labrasta [Final Lab for Linux Palvelimet 2024 Spring](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/):
 
 #### labraharjoitus d) 'howdy'
 
@@ -226,6 +226,8 @@ sudo chmod ugo+x /home/parallels
 - Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
 - Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
 
+Tein vastaavan toteutuksen [tehtävässäni h5](https://github.com/pinkkila/linux-course/blob/main/tehtava-h4.md) AWS:n EC2:lla ja halusinkin nyt kokeilla niin, että tekisin omalle paikalliselle virtuaalikoneelleni toisen käyttäjän, jolle voisin kirjautua SSH:lla. Näin voisin kokeilla oikeuksia ja kaikkea muuta samalla tavalla kuin Tero on demoillut tunnilla.  
+
 Käytin apuna Tero Karvisen [ohjeita](https://terokarvinen.com/linux-palvelimet/) Linux Palvelimet 2025 alkukevät sivulta kohdasta h4 Maailma kuulee vinkit ja omaa [tehtävääni lähteineen](https://github.com/pinkkila/linux-course/blob/main/tehtava-h4.md). 
 
 Asensin OpenSSH-clietin Teron ohjeiden komennolla:
@@ -272,7 +274,7 @@ cat >> .ssh/authorized_keys
 
 ![img_23.png](images/h7/img_23.png)
 
-Tuo komento jää auki, niin että siihen pystyy copy pastella syöttämään alla olevan kuvan kansiosta oikean avaimen.
+Tuo komento jää auki, niin että siihen pystyy copy pastella syöttämään alla olevan kuvan kansiosta oikean avaimen (eli public keyn, private key on käyttäjällä parallels).
 
 ![img_25.png](images/h7/img_25.png)
 
