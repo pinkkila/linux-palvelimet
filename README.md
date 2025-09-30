@@ -1,4 +1,4 @@
-# Linux Palvelimet (Linux Servers) Homework Reports (in Finnish)
+# Linux Palvelimet (Linux Servers) - Homework Reports (in Finnish)
 
 Homework reports for [Linux Palvelimet course](https://terokarvinen.com/linux-palvelimet/) taught by Tero Karvinen.
 In this course, I gained hands-on experience setting up and securing Linux-based services.
